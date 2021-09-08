@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Website</title>
+</head>
+<body>
+    <section class="header" id="header">
+        <div class="alert" id="alertSignedUp">
+            <h5>Congrats! You have successfully signed up!</h5>
+            <i class="fas fa-times" onclick="hideAlert()"></i>
+        </div>
+        <div class="logo"><h1>LOGO</h1></div>
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" id="closeBtn" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#video-banner">Videos</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <br><br><br>
+                    <li><a href="#" onclick="signUp()">Sign Up!</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" id="openBtn" onclick="openMenu()"></i>
+        </nav>
+        <div class="banner-text">
+            <h1>DoodleManPro_</h1>
+            <h2>Insane Guy</h2>
+            <p>This is my website, where I will be showcasing some of my best clips of different games that I play. <br>I play a variety of games. These include Forza Horizon, Fortnite and Rocket League.<br>You can read more about my website by clicking the button below.</p>
+            <div class="hero-btn"><a href="#"><span></span>Read More :D</a></div>
+        </div>
+    </section>
+    <div class="container" id="container">
+        <div class="sign-up-overlay">
+        </div>
+        <div class="sign-upBox">
+            <div class="formBox">
+                <form class="form">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="email" placeholder="E-Mail" required>
+                    <input type="file" placeholder="Profile-Pic" id="profile-pic" required>
+                    <div class="buttons">
+                        <div class="hero-btn submit" onclick="alert()"><a href="#" type="submit"><span></span>SUBMIT!</a></div>
+                        <div class="hero-btn cancel" onclick="closeSignUp()"><a href="#" type="submit"><span></span>Cancel</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--About Page-->
+<section class="about-me" id="about">
+    <div class="banner-text about-text">
+        <h1>About Me!</h1>
+        <h2>This page isn't ready yet D:</h2>
+        <p>Guys, I'm sorry, I'm an ordinary guy so this page isn't ready because i'd have to type everything.</p>
+    </div>
+</section>
+<!--Video-Banner-->
+
+    <section class="video-banner" id="video-banner">
+        <video src="images/car-flip.mp4" autoplay muted loop></video>
+        <div class="banner-text">
+            <h1>Insane Clips!</h1>
+            <h2>Prepare to get your mind blown.</h2>
+            <p>Check out some of my epic clips which I have made by playing games since the past 5 years, all the way back in 2016!</p>
+            <div class="hero-btn"><a href="#"><span></span>Videos</a></div>
+        </div>
+    </section>
+    <!--Feedback-->
+
+    <section class="feedback" id="feedback">
+        <div class="banner-text feedback-text">
+            <h1>Feedback!</h1>
+            <h2>What do you think of me?</h2>
+            <p>I hope you love my website, made it myself. Any feedback that you would like to give me based on my gameplay or this website please let me know below:</p>
+        </div>
+        <div class="form-box">
+            <form class="form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="E-Mail">
+                <input type="number" placeholder="Rating: Out of 10" max="10" min="1">
+                <textarea rows="10" placeholder="Feedback?"></textarea>
+            </form>
+            <div class="hero-btn submit"><a href="#" type="submit"><span></span>SUBMIT!</a></div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <section class="footer" id="footer">
+        <div class="copyright-text">
+            <p>This is a copyright website of Ameen Ahmed AKA DoodleManPro_<br>Made with <i class="far fa-heart"></i></p>
+        </div>
+    </section>
+</body>
+
+
+
+
+
+<script>
+    var navLinks = document.getElementById("navLinks")
+    var container = document.getElementById("container")
+    var alertSignedUp = document.getElementById("alertSignedUp")
+    function closeMenu() {
+        navLinks.style.right = "-250px";
+    } 
+    function openMenu(){
+        navLinks.style.right = "0px";
+    }
+
+    function signUp() {
+        container.style.display = "flex";
+        navLinks.style.right = "-250px";
+    }
+
+    function alert() {
+        container.style.display = "none";
+        alertSignedUp.style.display = "flex"
+    }
+
+    function closeSignUp() {
+        container.style.display = "none";
+    }
+
+    function hideAlert() {
+        alertSignedUp.style.display = "none";
+    }
+</script>
+</html>

@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background: linear-gradient(45deg, salmon, khaki);
+    width: 100%;
+    height: 100vh;
+}
+.nav-links {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.5s;
+}
+.nav-links ul li {
+    list-style: none;
+}
+.nav-links ul li a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+.nav-links ul li a:hover {
+    color: salmon;
+}
+#closeBtn {
+    top: 0;
+    position: absolute;
+    left: 0;
+    margin: 20px;
+    font-size: 25px;
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#openBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    font-size: 25px;
+    color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 99;
+}
+#openBtn:hover, #closeBtn:hover {
+    transform: translateY(-7px);
+}
+.logo {
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 20px;
+}
+.banner-text {
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+.banner-text h1 {
+    font-size: 60px;
+}
+.banner-text h2 {
+    font-size: 30px;
+}
+.hero-btn {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn a {
+    text-decoration: none;
+    color: #111;
+    z-index: 15;
+}
+.hero-btn span {
+    background: white;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -2;
+    transition: .2s;
+}
+.hero-btn:hover span {
+    width: 100%;
+}
+/*About-Me*/
+.about-me {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #111;
+}
+.about-text {
+    top: 2%;
+    color: #fff;
+}
+
+/*Video-Banner*/
+.video-banner {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: #ccc;
+}
+.video-banner video {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    object-fit: cover;
+}
+.feedback {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.form-box {
+    position: absolute;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    bottom: 10%;
+}
+.feedback-text {
+    position: absolute;
+    top: 5%;
+}
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form input {
+    height: 50px;
+}
+.form input, .form textarea {
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, salmon, khaki);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    animation: animate 5s linear infinite;
+    outline: none;
+}
+
+@keyframes animate {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.form ::placeholder {
+    color: black;
+}
+.submit {
+    margin-bottom: 20px;
+    background: #111;
+}
+.submit a {
+    color: #fff;
+}
+.submit:hover a {
+    color:#111;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.copyright-text p{
+    color: rgb(138, 138, 138);
+}
+.copyright-text .far {
+    color: salmon;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    transition: .5s;
+}
+.sign-up-overlay {
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.7;
+    z-index: 999;
+}
+.sign-upBox {
+    width: 60%;
+    height: 500px;
+    background: #fff;
+    z-index: 1000;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.cancel span{
+    background: #000;
+}
+.cancel:hover a {
+    color: #fff;
+    transition: .5s;
+}
+.formBox {
+    width: 80%;
+}
+.buttons  {
+    display: flex;
+    justify-content: center;
+}
+.buttons .hero-btn {
+    margin-right: 20px;
+}
+.alert {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #111;
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.alert h5 {
+    font-size: 30px;
+    color: #fff;
+}
+.alert .fas {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .banner-text {
+        left: 10%;
+        top: 20%;
+    }
+    .banner-text h1 {
+        font-size: 40px;
+    }
+    .banner-text p {
+        font-size: 15;
+        margin-right: 100px;
+    }
+    .form-box {
+        bottom: 0;
+    }
+    .copyright-text p {
+        font-size: 10px;
+    }
+}
